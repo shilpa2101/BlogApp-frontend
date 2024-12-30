@@ -7,7 +7,8 @@ import CreatePost from './components/CreatePost';
 import ViewAll from './components/ViewAll';
 import ViewMyPost from './components/ViewMyPost';
 import SearchUser from './components/SearchUser';
-import DeleteUser from './components/DeleteUser';
+
+import Navbar from './components/Navbar';
 
 function App() {
   return (
@@ -20,7 +21,8 @@ function App() {
       <Route path='/viewall' element={<ViewAll/>}/>
       <Route path='/viewmypost' element={<ViewMyPost/>}/>
       <Route path='/search' element={<SearchUser/>}/>
-      <Route path='/delete' element={<DeleteUser/>}/>
+     
+      <Route path='/navbar' element={<Navbar/>}/>
       </Routes></BrowserRouter>
     </div>
   );

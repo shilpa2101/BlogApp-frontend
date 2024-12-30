@@ -1,5 +1,6 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
+import Navbar from './Navbar'
 
 const ViewMyPost = () => {
     const [datas, changedata] = useState(
@@ -28,6 +29,7 @@ const ViewMyPost = () => {
     useEffect(()=>{fetchdata()},[])
   return (
     <div>
+        <Navbar/>
          <div className="container">
             {datas.map((value,index)=>{
                 return  <div className="row">

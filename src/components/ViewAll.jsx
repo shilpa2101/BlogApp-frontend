@@ -1,5 +1,6 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
+import Navbar from './Navbar'
 
 const ViewAll = () => {
     const [token,setToken]=useState(sessionStorage.getItem("token"))
@@ -31,6 +32,7 @@ const ViewAll = () => {
   return (
     <div>
         <div>
+            <Navbar/>
         <div className="container">
             {data.map((value,index)=>{
                 return  <div className="row">

@@ -1,23 +1,27 @@
 import logo from './logo.svg';
 import './App.css';
+import Signup from './components/Signup';
+import SignIn from './components/SignIn';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import CreatePost from './components/CreatePost';
+import ViewAll from './components/ViewAll';
+import ViewMyPost from './components/ViewMyPost';
+import SearchUser from './components/SearchUser';
+import DeleteUser from './components/DeleteUser';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div >
+     <BrowserRouter>
+     <Routes>
+      <Route path='/' element={<SignIn/>}/>
+      <Route path='/signup' element={<Signup/>}/>
+      <Route path='/create' element={<CreatePost/>}/>
+      <Route path='/viewall' element={<ViewAll/>}/>
+      <Route path='/viewmypost' element={<ViewMyPost/>}/>
+      <Route path='/search' element={<SearchUser/>}/>
+      <Route path='/delete' element={<DeleteUser/>}/>
+      </Routes></BrowserRouter>
     </div>
   );
 }
